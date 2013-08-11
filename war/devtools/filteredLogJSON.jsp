@@ -8,6 +8,6 @@
 	if (date != null && !date.equals("")) {
 		localDate = new LocalDate(date);
 	}
-	String json = LogsCollector.getFilteredLogsJSON(localDate.toString());
+	String json = LogsCollector.getFilteredLogsJSON(localDate);
 	out.print(json);
 %>

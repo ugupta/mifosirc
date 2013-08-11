@@ -7,7 +7,7 @@ var header = $("#header");
 var nextLogDate;
 var prevLogDate;
 
-$(window).keypress(function(e) {
+$(window).keydown(function(e) {
 	if(e.keyCode == 37) {
 		getMoreLog(prevLogDate);
 	}

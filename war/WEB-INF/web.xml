@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="http://java.sun.com/xml/ns/javaee"
-xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	
 	<servlet>
-		<servlet-name>Mifosirc</servlet-name>
-		<servlet-class>org.mifos.irc.MifosircServlet</servlet-class>
+		<servlet-name>archiveTask</servlet-name>
+		<servlet-class>org.mifos.irc.ArchiveTaskServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Mifosirc</servlet-name>
-		<url-pattern>/mifosirc</url-pattern>
+		<servlet-name>archiveTask</servlet-name>
+		<url-pattern>/archiveTask</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>logs</servlet-name>
+		<servlet-class>org.mifos.irc.LogsJsonServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logs</servlet-name>
+		<url-pattern>/logs.json</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
